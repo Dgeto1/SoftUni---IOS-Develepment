@@ -15,5 +15,5 @@ struct Car {
 
 let car1 = Car(make: "Mercedes", model: "S63", horsePower: 500, torque: 55.5, dateOfManufacturing: "25.11.2022")
 print(car1)
-print(car1.PowerOfTheCar(car: car1  ))
+print(car1.PowerOfTheCar(car: car1))
 
