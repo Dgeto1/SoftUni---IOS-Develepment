@@ -16,19 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRP-f2-uc4">
-                                <rect key="frame" x="105" y="89" width="183" height="30.333333333333329"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="To-Do List">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="systemPurpleColor"/>
-                                            <font key="NSFont" size="24" name="Chalkduster"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fSe-qe-sHt">
                                 <rect key="frame" x="78" y="253" width="236" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -78,9 +65,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-Pi-y65">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-Pi-y65">
                                 <rect key="frame" x="155" y="127" width="83" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Sign Up">
                                         <attributes>
@@ -92,13 +78,38 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEp-KE-gBh">
+                                <rect key="frame" x="169" y="551" width="175" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue as a guest"/>
+                                <connections>
+                                    <segue destination="8QQ-kH-rzs" kind="show" id="MVl-BO-SQA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRP-f2-uc4">
+                                <rect key="frame" x="105" y="88" width="183" height="30.333333333333329"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="To-Do List">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemPurpleColor"/>
+                                            <font key="NSFont" size="24" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DIb-Pi-y65" secondAttribute="trailing" constant="155" id="9gG-Ms-DDc"/>
+                            <constraint firstItem="DIb-Pi-y65" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="Nia-hv-rme"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YRP-f2-uc4" secondAttribute="trailing" constant="105" id="PSJ-TW-wmb"/>
                             <constraint firstItem="YRP-f2-uc4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Sbs-pn-BGh"/>
                             <constraint firstItem="YRP-f2-uc4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="XJK-Z6-unn"/>
+                            <constraint firstItem="DIb-Pi-y65" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="mks-Ej-L3p"/>
                             <constraint firstItem="YRP-f2-uc4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="msp-qu-Hjo"/>
                         </constraints>
                     </view>
@@ -186,9 +197,8 @@
                                 <rect key="frame" x="58" y="307" width="62" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIm-7a-TTk">
-                                <rect key="frame" x="58" y="609" width="276" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIm-7a-TTk">
+                                <rect key="frame" x="58" y="636.66666666666663" width="276" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Continue"/>
                                 <connections>
@@ -198,6 +208,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7PP-28-ZoM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7PP-28-ZoM" firstAttribute="bottom" secondItem="UIm-7a-TTk" secondAttribute="bottom" constant="112" id="4P1-kZ-eJg"/>
+                            <constraint firstItem="7PP-28-ZoM" firstAttribute="trailing" secondItem="UIm-7a-TTk" secondAttribute="trailing" constant="59" id="CIM-tM-luG"/>
+                            <constraint firstItem="UIm-7a-TTk" firstAttribute="leading" secondItem="7PP-28-ZoM" secondAttribute="leading" constant="58" id="RwG-tP-C5i"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VMj-Bk-anN"/>
                 </viewController>
@@ -429,11 +444,11 @@
             </objects>
             <point key="canvasLocation" x="1670.9923664122136" y="690.84507042253529"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller2-->
         <scene sceneID="6Fa-x8-dRA">
             <objects>
-                <viewController id="s7H-fs-8sD" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rp0-th-Tbh">
+                <viewController id="s7H-fs-8sD" customClass="ViewController2" customModule="HomeworkL6App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rp0-th-Tbh" customClass="UIViewController2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -514,6 +529,9 @@
                                 <rect key="frame" x="316" y="450" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="onTintColor" red="0.96841138599999999" green="0.88763046769999998" blue="0.24541708540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="switchStateDidChange:" destination="s7H-fs-8sD" eventType="valueChanged" id="jqi-CF-CBv"/>
+                                </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTf-75-sMf">
                                 <rect key="frame" x="58" y="612" width="276" height="62"/>
@@ -530,6 +548,10 @@
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                     </view>
                     <navigationItem key="navigationItem" id="edc-t9-GcB"/>
+                    <connections>
+                        <outlet property="SpecificOptionSwitch" destination="zn2-o7-P1g" id="HPg-ZJ-NrY"/>
+                        <outlet property="datePicker" destination="nww-dh-ZHx" id="C1u-yw-dTK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W3g-x1-01N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -537,8 +559,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NwO-sq-BEa"/>
-        <segue reference="L4z-Zj-pef"/>
+        <segue reference="nHB-M4-baR"/>
+        <segue reference="jUu-P8-Wkr"/>
+        <segue reference="aaD-e6-i2W"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="107"/>
