@@ -1,22 +1,28 @@
 //
-//  DetailsViewController.swift
-//  RegularExam
+//  SettingsViewController.swift
+//  RetakeExam
 //
-//  Created by Hristo Papanov on 5.02.23.
+//  Created by Hristo Papanov on 12.02.23.
 //
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var countSlider: UISlider!
+    @IBOutlet weak var resultLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //print(LocalDataManager.getBlockChainData().first)
         // Do any additional setup after loading the view.
     }
     
 
+    @IBAction func sliderValueChanged(_ sender: Any) {
+        resultLabel.text = String(countSlider.value)
+    }
+    
     /*
     // MARK: - Navigation
 

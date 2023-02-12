@@ -43,9 +43,9 @@ class LocalDataManager{
         let allBlockChainData = LocalDataManager.realm.objects(BlockChain.self)
     }
     
-    static func getBlockChainData() -> [BlockChain] {
+    /*static func getBlockChainData() -> [BlockChain] {
         return Array(LocalDataManager.realm.objects(BlockChain.self).sorted(byKeyPath: "buildTime", ascending: false))
-    }
+    }*/
     
     /*static let realm = try! Realm()
     

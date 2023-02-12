@@ -1,9 +1,6 @@
 import UIKit
 
-struct TaylorFan{
-static var fS = "SiO"
-    var name: String
-    var age: Int
+let names: [String?] = ["Barbara", nil, "Janet", nil, "P", nil, "G"]
+if let firstName = names.first{
+    print(firstName)
 }
-let fan = TaylorFan(name: "James", age: 25)
-print(fan.fS)

@@ -1,32 +1,33 @@
 //
-//  BitcoinDataTableViewController.swift
-//  RegularExam
+//  CoinDataTableViewController.swift
+//  RetakeExam
 //
-//  Created by Hristo Papanov on 5.02.23.
+//  Created by Hristo Papanov on 12.02.23.
 //
 
 import UIKit
 
-/*class BitcoinDataTableViewController: UITableViewController {
+class CoinDataTableViewController: UITableViewController {
 
-    var blockbookData = LocalDataManager.getBlockChainData()
+    var marketTrackerElementData = LocalDataManager.getMarketData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NotificationCenter.default.addObserver(forName: .dataUpdatedNotification, object: nil, queue: OperationQueue.main) {[weak self] _ in
-            self?.updateDate()
+        NotificationCenter.default.addObserver(forName: .dataUpdatedNotification, object: nil, queue: OperationQueue.main) { [weak self] _ in
+            self?.updateData()
         }
     }
-    
-    func updateDate(){
+
+    func updateData(){
         DispatchQueue.main.async {
-            self.blockbookData = LocalDataManager.getBlockChainData()
+            self.marketTrackerElementData = LocalDataManager.getMarketData()
             self.tableView.reloadData()
         }
     }
-
     // MARK: - Table view data source
 
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -34,16 +35,17 @@ import UIKit
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.blockbookData.count
+        return self.marketTrackerElementData.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? BitcoinDataTableViewCell else{
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+                as? CoinDataTableViewCell else{
             return UITableViewCell()
         }
-
-        cell.setupCell(with: self.blockbookData[indexPath.row])
+        
+        cell.setupCell(with: self.marketTrackerElementData[indexPath.row])
 
         return cell
     }
@@ -94,4 +96,4 @@ import UIKit
     }
     */
 
-}*/
+}

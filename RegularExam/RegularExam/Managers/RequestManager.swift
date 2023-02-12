@@ -1,10 +1,3 @@
-//
-//  RequestManager.swift
-//  RegularExam
-//
-//  Created by Hristo Papanov on 5.02.23.
-//
-
 
 
 import Foundation
@@ -30,7 +23,7 @@ class RequestManager {
                 responseValue.id = ObjectId.generate()
 //                completion(nil, responseValue.realm?.add(<#T##object: Object##Object#>))
                 
-                /*DispatchQueue.main.async {
+               /* DispatchQueue.main.async {
                     try? LocalDataManager.realm.write {
                         LocalDataManager.realm.delete(LocalDataManager.allBlockChainData())
                     }
@@ -41,8 +34,8 @@ class RequestManager {
                         LocalDataManager.realm.add(responseValue)
                     }
                     NotificationCenter.default.post(name: .dataUpdateNotification, object: nil)
-                }
-//                print(completion)*/
+                }*/
+//                print(completion)
             }
         }
 }

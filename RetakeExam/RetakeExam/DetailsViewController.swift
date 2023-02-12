@@ -1,8 +1,8 @@
 //
 //  DetailsViewController.swift
-//  RegularExam
+//  RetakeExam
 //
-//  Created by Hristo Papanov on 5.02.23.
+//  Created by Hristo Papanov on 12.02.23.
 //
 
 import UIKit
@@ -11,8 +11,7 @@ class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //print(LocalDataManager.getBlockChainData().first)
+        //print(LocalDataManager.getMarketData().first ?? <#default value#>)
         // Do any additional setup after loading the view.
     }
     
